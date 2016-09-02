@@ -3,7 +3,7 @@
 <!--[if lt IE 9]>
   <html class="iem7">
 <![endif]-->
-<html class=no-js id="mylocationmap-com" lang="en">
+<html class=no-js id="mylocationmap-co" lang="en">
  <head>
   <meta charset=utf-8>
   <title>ApiJam</title>
@@ -20,18 +20,14 @@
 
   <link href="assets/css/min.css" rel=stylesheet type='text/css'>
   <script type="text/javascript" src="assets/js/modernizr.js"></script>
-   
-  <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">-->
-  <link href=apple-touch-icon-114x114-precomposed.png rel=apple-touch-icon-precomposed sizes=114x114>
-  <link href=apple-touch-icon-72x72-precomposed.png rel=apple-touch-icon-precomposed sizes=72x72>
-  <link href=apple-touch-icon-57x57-precomposed.png rel=apple-touch-icon-precomposed sizes=57x57>
-  <link href=apple-touch-icon-precomposed.png rel=apple-touch-icon-precomposed>
-  <link href=apple-touch-icon.png rel="shortcut icon">
-  <link href="/favicon.ico" rel="shortcut icon">
-  <!--<meta content="newspaper map | â°" property=og:title>
-  <meta content=website property=og:type>
-  <meta content="http://newspapermap.com/" property=og:url>
-  <meta content="http://newspapermap.com/apple-touch-icon-114x114-precomposed.png" property=og:image>-->
+
+<!-- favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -46,7 +42,7 @@
 
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
-  <!-- style leaflet map -->
+  <!-- style map -->
 <style>
     body {
       padding: 0;
@@ -61,13 +57,13 @@
  <body>
   <div class="navbar navbar-fixed-top">
    <div class=navbar-inner>
-    <div class=container><img alt=logo height=30 src=assets/img/logo.png style="float:left; padding:10px;" width=20><!-- width=20 -->
+    <div class=container><img alt=logo height=30 src=assets/img/logo-54x54.png style="float:left; padding:10px;" width=20><!-- width=20 -->
      <a class="btn btn-navbar" data-target=.nav-collapse data-toggle=collapse>
       <span class=icon-bar></span>
       <span class=icon-bar></span>
       <span class=icon-bar></span>
      </a>
-     <a class="brand hidden-tablet" href="http://www.smartway.co" style="font-family: Georgia, 'Times New Roman', Times, serif; text-shadow:#000 0 1px 0;">my location</a>
+     <a class="brand hidden-tablet" href="http://apijam-mobile.azurewebsites.net" style="font-family: Georgia, 'Times New Roman', Times, serif; text-shadow:#000 0 1px 0;">My location</a>
      <div class=nav-collapse>
       <ul class="nav nav-pills">
        <li class="dropdown hidden-phone hidden-tablet">
@@ -78,56 +74,56 @@
         <ul class=dropdown-menu>
          <li><a href="https://www.google.be/?gfe_rd=cr&ei=s4IwV9LmNa-LtgeL9IbwCQ#q=traffic">Custom search</a></li>
         </ul>
-       </li>
        <li class="dropdown hidden-phone hidden-tablet">
         <a class=dropdown-toggle data-toggle=dropdown href="#">
          <i class="icon-pencil icon-white"></i>
          Contact<b class=caret></b>
         </a>
         <ul class=dropdown-menu>
-         <li style="margin-left:15px"><a href="https://twitter.com/emergencysphere" class="twitter-follow-button" data-show-count="true">Follow
-          @smartways</a></li>
-         <li><a href="https://twitter.com/intent/user?screen_name=smwartway">twitter.com/smartway</a></li>
+         <li style="margin-left:15px"><a href="https://twitter.com/DesireYavro" class="twitter-follow-button" data-show-count="true">Follow
+          @me</a></li>
+         <li class=divider></li>
+         <li><a href="https://twitter.com/search?q=traffic%20jam&src=typd">Check tweets on traffic+jam</a></li>
          <li class=divider></li>
          <li>
           <div class=fb-like data-href="http://facebook.com/emergencysphere/" data-layout=button_count data-send=false data-show-faces=false data-width=50 style=margin-left:15px></div>
-          <a href="//facebook.com/newspapermap">facebook.com/smartway</a></li>
+          <a href="https://www.facebook.com/ApiBot-1191719787527331/">facebook</a></li>
          <li class=divider></li>
-         <li><a href="mailto:emergencysphere@gmail.com">me@smartway.co</a></li>
+         <li><a href="http://m.me/startupmeifyoucan">Message me</a></li>
          <li class=divider></li>
-         <li><a href="">&copy; dnzengou 2016</a></li>
+         <li><a href="http://desireyavro.com">&copy; desireyavro 2016</a></li>
         </ul>
        </li>
-       <li class=navbar-search>
-        <select class=span2 id=lang onChange="changeMap0();" title="Select to show only smart ways in specific locations">
+       <!--<li class=navbar-search>
+        <select class=span2 id=lang onChange="changeMap0();" title="Select to show only rides ways in specific locations">
          <option value="">Filter by location</option>
          <option value="">ALL</option>
          <option value=UK>UK</option>
          <option value=BE>BE</option>
          <option value=DE>DE</option>
         </select>
-       </li>
-       <li class=navbar-search>
+       </li>-->
+       <!--<li class=navbar-search>
         <input autocomplete=off class=input-medium id=paper onClick="this.value='';" onFocus="searchTextField.value='';" onKeyDown="if (event.keyCode==13) changeData(this.value);" onwebkitspeechchange="changeData(this.value)" placeholder="ID" style="margin-left:5px;" x-webkit-speech>
        </li>
        <li class=navbar-search>
         <input autocomplete=off class=input-medium id=searchTextField onClick="this.value='';" onFocus="paper.value='';" placeholder="Location" style="margin-left:5px;" x-webkit-speech>
-       </li>
+       </li>-->
        <li>
         <div class="btn-group">
-         <a class="btn btn-primary btn-small alignleft tooltip_bottom" onClick="locategps();" style="margin-left:5px;" title="Home">
+         <a class="btn btn-primary btn-small alignleft tooltip_bottom" href='index.html#page2' style="margin-left:5px;" title="Home">
           <i class="fa fa-map-marker"></i>
           <!--"icon-home icon-white"-->
          </a>
-         <a class="btn btn-primary btn-small alignleft tooltip_bottom" onClick="changeMap6();" title="Reset">
+         <a class="btn btn-primary btn-small alignleft tooltip_bottom" href='mylocation.html' title="Reset">
           <i class="fa fa-refresh"></i>
           <!--"icon-plus-sign icon-white"-->
          </a>
-         <a class="btn btn-warning btn-small alignleft tooltip_bottom hidden-phone" data-toggle=modal href='' title="About the map">
+         <a class="btn btn-warning btn-small alignleft tooltip_bottom hidden-phone" href='index.html#page1' title="About the map">
           <i class="fa fa-info-circle"></i>
           <!-- "icon-info-sign icon-white" -->
          </a>
-         <a class="btn btn-alert alignleft btn-small" href='m.html'><i class="fa fa-mobile"></i></a>
+         <!--<a class="btn btn-alert alignleft btn-small" href='#'><i class="fa fa-mobile"></i></a>-->
         </div>
        </li>
       </ul>
@@ -135,7 +131,6 @@
     </div>
    </div>
   </div>
-
   <div id="map"></div>
 <!-- leaflet map -->
 
